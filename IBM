@@ -1,0 +1,29 @@
+#Defining function
+def bmi(weight, height):
+  index = weight / (height * height)
+  return index  #sends the return value back
+
+#request input from patient
+weight = int(input("put your weight: "))
+height = float(input("put your height: "))
+
+#Calling function and using return value
+patient = bmi(weight, height) #stores return value
+#decision
+if patient <= 15.9:
+  print(Fore.RED + "Severe Thinness")
+elif 16 <= patient <= 16.9:
+  print(Fore.MAGENTA + "Moderate Thinness")
+elif 17 <= patient <= 18.4:
+  print(Fore.YELLOW + "Mild Thinness")
+elif 18.5 <= patient <= 24.9:
+  print(Fore.GREEN + "Healthy")
+elif 25 <= patient <= 29.9:
+  print(Fore.YELLOW + "Overweight")
+elif 30 <= patient <= 34.9:
+  print(Fore.MAGENTA + "Obese Class I")
+elif 35 <= patient <= 39.9:
+  print(Fore.MAGENTA + "Obese Class II")
+elif patient >= 40:
+  print(Fore.MAGENTA + "Obese Class III")
+  
